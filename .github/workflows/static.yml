@@ -1,12 +1,8 @@
-# Simple workflow for deploying visual_representation.html to GitHub Pages
-name: Deploy visual_representation.html to Pages
+name: Deploy index.html to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 permissions:
@@ -34,8 +30,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload only the specific file
-          path: './visual_representation.html'
+          path: './index.html'
 
       - name: Deploy to GitHub Pages
         id: deployment
